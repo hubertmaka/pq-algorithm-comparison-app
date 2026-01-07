@@ -3,3 +3,6 @@ pandas
 plotly
 cryptography
 matplotlib
+numpy
+fpdf2
+py-cpuinfo

@@ -1,14 +1,23 @@
 [project]
 name = "pqc-project"
-version = "0.1.0"
-description = "Add your description here"
+version = "2.0.0"
+description = "Comprehensive benchmark tool for Classical vs Post-Quantum Cryptographic Algorithms"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "cryptography>=46.0.3",
     "liboqs-python>=0.14.1",
     "matplotlib>=3.10.7",
+    "numpy>=2.0.0",
     "pandas>=2.3.3",
     "plotly>=6.5.0",
     "streamlit>=1.51.0",
+    "fpdf2>=2.8.0",
+    "py-cpuinfo>=9.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/PQC-Project"
+Documentation = "https://github.com/yourusername/PQC-Project/blob/main/USER_GUIDE.md"
+Repository = "https://github.com/yourusername/PQC-Project"
+Issues = "https://github.com/yourusername/PQC-Project/issues"

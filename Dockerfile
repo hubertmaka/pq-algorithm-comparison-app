@@ -37,6 +37,10 @@ COPY --chown=oqs:oqs . .
 
 USER oqs
 
+# Set matplotlib cache directory
+ENV MPLCONFIGDIR=/home/oqs/.cache/matplotlib
+RUN mkdir -p /home/oqs/.cache/matplotlib
+
 EXPOSE 8501
 
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health || exit 1
