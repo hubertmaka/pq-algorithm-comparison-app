@@ -223,7 +223,6 @@ Simulates complete cryptographic applications.
 3. **Export Options**
    - CSV export
    - JSON export with metadata
-   - PDF report generation
 
 ### Example Workflow
 
@@ -243,7 +242,7 @@ Simulates complete cryptographic applications.
    - Statistics: Consistency scores
    - Analysis: Classic vs PQC comparison
    - Recommendations: Based on use case
-6. Export results (CSV/JSON/PDF)
+6. Export results (CSV/JSON)
 ```
 
 ---
