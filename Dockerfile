@@ -37,9 +37,9 @@ COPY --chown=oqs:oqs . .
 
 USER oqs
 
-# Set matplotlib cache directory
-ENV MPLCONFIGDIR=/home/oqs/.cache/matplotlib
-RUN mkdir -p /home/oqs/.cache/matplotlib
+# Set matplotlib cache directory (matching main.py configuration)
+ENV MPLCONFIGDIR=/home/oqs/.matplotlib_cache
+RUN mkdir -p /home/oqs/.matplotlib_cache
 
 EXPOSE 8501
 
