@@ -248,49 +248,6 @@ Simulates complete cryptographic applications.
 
 ---
 
-## 📈 Typical Results
-
-### Performance (Time)
-
-```
-Key Exchange (1000 operations):
-┌─────────────────┬──────────────┬────────────────┐
-│ Algorithm       │ Time (ms)    │ vs RSA-2048    │
-├─────────────────┼──────────────┼────────────────┤
-│ RSA-2048        │ 45.2         │ 1.0x (baseline)│
-│ ECDH P-256      │ 3.5          │ 12.9x faster   │
-│ ML-KEM-768      │ 0.45         │ 100x faster!   │
-│ ML-KEM-1024     │ 0.65         │ 69x faster     │
-└─────────────────┴──────────────┴────────────────┘
-
-Signatures (1000 operations):
-┌─────────────────┬──────────────┬────────────────┐
-│ Algorithm       │ Sign+Verify  │ Comparison     │
-├─────────────────┼──────────────┼────────────────┤
-│ RSA-2048        │ 48.5 ms      │ Baseline       │
-│ ECDSA P-256     │ 4.2 ms       │ 11.5x faster   │
-│ ML-DSA-65       │ 6.8 ms       │ 7.1x faster    │
-│ Falcon-512      │ 12.3 ms      │ 3.9x faster    │
-│ SPHINCS+-128f   │ 145.2 ms     │ 0.33x (slower) │
-└─────────────────┴──────────────┴────────────────┘
-```
-
-### Size Overhead
-
-```
-Key + Ciphertext/Signature Sizes:
-┌─────────────────┬────────────┬──────────────┬────────────┐
-│ Algorithm       │ Public Key │ Output       │ Total      │
-├─────────────────┼────────────┼──────────────┼────────────┤
-│ RSA-2048        │ 294 B      │ 256 B        │ 550 B      │
-│ ECDSA P-256     │ 91 B       │ 64 B         │ 155 B      │
-│ ML-KEM-768      │ 1,184 B    │ 1,088 B      │ 2,272 B    │
-│ ML-DSA-65       │ 1,952 B    │ 3,293 B      │ 5,245 B    │
-│ Falcon-512      │ 897 B      │ 666 B        │ 1,563 B    │
-│ SPHINCS+-128f   │ 32 B       │ 17,088 B     │ 17,120 B   │
-└─────────────────┴────────────┴──────────────┴────────────┘
-```
-
 **Key Insights:**
 
 - ✅ PQC (Kyber, Dilithium) are often **faster** than RSA
@@ -401,27 +358,6 @@ Benefits:
 
 ---
 
-## 🏗️ Project Structure
-
-```
-PQC-Project/
-├── main.py                    # Main Streamlit application
-├── classic_algo.py            # Classical algorithms (RSA, ECDSA)
-├── pqc_algo.py               # Post-quantum algorithms wrapper
-├── hybrid_encryption.py       # Hybrid encryption implementation
-├── scenarios.py              # Real-world scenario simulations
-├── statistics_utils.py       # Statistical analysis utilities
-├── export_utils.py           # Export functionality (CSV, JSON, PDF)
-├── analysis_utils.py         # Result analysis and recommendations
-├── requirements.txt          # Python dependencies
-├── Dockerfile                # Docker configuration
-├── README.md                 # This file
-├── USER_GUIDE.md            # Comprehensive user guide
-└── ANALIZA_I_ULEPSZENIA.md  # Analysis and improvements (Polish)
-```
-
----
-
 ## 📦 Dependencies
 
 ### Core Libraries
@@ -491,42 +427,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 👥 Authors and Acknowledgments
-
-- **Project Team:** PQC Benchmark Tool Contributors
-- **Special Thanks:** Open Quantum Safe project and NIST PQC program
-
----
-
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/PQC-Project/issues)
 - **Documentation:** [User Guide](USER_GUIDE.md)
-- **Community:** [Open Quantum Safe Discussions](https://github.com/open-quantum-safe/liboqs/discussions)
-
----
-
-## 🔔 Updates and Roadmap
-
-### Current Version: 2.0 (January 2026)
-
-**Recent Additions:**
-
-- ✅ Hybrid encryption mode
-- ✅ Real-world scenario simulations
-- ✅ Advanced statistical analysis
-- ✅ PDF report generation
-- ✅ Comprehensive algorithm recommendations
-- ✅ Migration strategy guidance
-
-**Planned Features:**
-
-- 🔜 Side-channel resistance analysis
-- 🔜 Memory profiling
-- 🔜 Multi-threaded performance
-- 🔜 Cloud deployment support
-- 🔜 Automated regression testing
-- 🔜 Integration with CI/CD pipelines
 
 ---
 
